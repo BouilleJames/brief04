@@ -36,6 +36,22 @@ function afficherMasquer(){
         d.style.visibility="visible";
 }
 
+
+
+
+
+
+// ***************************************************************
+// ****************************Popup****************************
+for (let index = 0; index < container.length; index++) {
+    const jeu = boutons[index];
+    console.log(jeu.getAttribute('id'));
+    jeu.addEventListener('click', ()=>{
+        console.log(jeu);
+        popupContainer.classList.toggle('active');
+        })
+}
+// ************************************************************
 // let cards = document.querySelectorAll('card');
 // cards.forEach(card => {
 //     card.style.margin-right == "10%";

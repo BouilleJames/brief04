@@ -158,6 +158,8 @@ section:nth-child(3){
     width: 1600px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .card,
 .card img{
@@ -227,7 +229,7 @@ footer{
 footer p{
     margin: auto;
 }
-@media screen and (min-width: 601px){
+/* @media screen and (min-width: 601px){
     section:nth-child(3){
         display: flex;
         justify-content: center;
@@ -236,8 +238,8 @@ footer p{
         margin-left: 15%;
         width: 25%;
     }
-}
-@media screen and (max-width: 600px){
+} */
+@media screen and (max-width: 700px){
     section:nth-child(3){
         display: flex;
         flex-direction: column;
@@ -249,9 +251,6 @@ footer p{
     }
     .cardPlaces{
         margin-top: 10px;
-        width: 100%;
-    }
-    #carrousel{
-        width: 100%;
+        width: 90%;
     }
 }
