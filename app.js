@@ -47,16 +47,18 @@ function afficherMasquer(){
 // ****************************Popup****************************
 
 // Sélectionner tous les boutons "Get more info"
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.card button');
+const imgTab =document.querySelectorAll('.card img');
 
 // Ajouter un événement de clic à chaque bouton
-for (let i = 1; i < buttons.length; i++) {
+for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function() {
     // Créer la popup
     const popup = document.createElement('div');
     popup.classList.add('popup');
     popup.innerHTML = `
       <div class="popupContent">
+        <img src='${imgTab[i].src}'>
         <h2>${this.previousElementSibling.textContent}</h2>
         <p>${this.previousElementSibling.querySelector('.cardContent p').textContent}</p>
         <button class="closeBtn">Close</button>
@@ -75,8 +77,6 @@ for (let i = 1; i < buttons.length; i++) {
     });
   });
 }
-
-
 
 // // Ajout d'un gestionnaire d'événements sur cet élément
 // lastVisibleElement.addEventListener('click', (event) => {

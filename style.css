@@ -259,9 +259,9 @@ footer p{
 
 .popupContent{
     width: 80%;
-    height: 70%;
+    height: 80%;
     position : fixed;
-    bottom: 30%;
+    bottom: 10%;
     right : 10%;
     background-color: #ee5057;
     border : 15px solid rgb(37, 37, 37);
@@ -280,8 +280,12 @@ footer p{
 .popupContent p{
     font-size: 18px;
     margin-top: 40px;
+    text-align: center;
 }
-
+ img{
+    width: fit-content;
+    
+}
 .closeBtn{
     position: absolute;
     bottom: 0;
@@ -290,3 +294,4 @@ footer p{
     color: white;
     background-color: #000;
 }
+
