@@ -1,3 +1,5 @@
+// **********************CARROUSEL**********************
+
 document.body.onload=function(){
     nbr=4;
     p=0;
@@ -43,14 +45,60 @@ function afficherMasquer(){
 
 // ***************************************************************
 // ****************************Popup****************************
-for (let index = 0; index < container.length; index++) {
-    const jeu = boutons[index];
-    console.log(jeu.getAttribute('id'));
-    jeu.addEventListener('click', ()=>{
-        console.log(jeu);
-        popupContainer.classList.toggle('active');
-        })
+
+// Sélectionner tous les boutons "Get more info"
+const buttons = document.querySelectorAll('button');
+
+// Ajouter un événement de clic à chaque bouton
+for (let i = 1; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function() {
+    // Créer la popup
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+    popup.innerHTML = `
+      <div class="popupContent">
+        <h2>${this.previousElementSibling.textContent}</h2>
+        <p>${this.previousElementSibling.querySelector('.cardContent p').textContent}</p>
+        <button class="closeBtn">Close</button>
+      </div>
+    `;
+    const sections = document.body.querySelectorAll('section');
+    let thirdSection = sections[2];
+    thirdSection.appendChild(popup);
+    // document.body.appendChild(popup);
+    console.log(buttons);
+
+    // Ajouter un événement de clic au bouton "Close"
+    const closeBtn = popup.querySelector('.closeBtn');
+    closeBtn.addEventListener('click', function() {
+      popup.remove();
+    });
+  });
 }
+
+// // Ajout d'un gestionnaire d'événements sur cet élément
+// lastVisibleElement.addEventListener('click', (event) => {
+//     // Empêcher le comportement par défaut (ici, le clic) sur l'élément
+//     event.preventDefault();
+//   });
+
+
+
+
+
+
+
+
+// const buttonModal = getElementsByClassName('buttonModal');
+
+// for (let index = 0; index < container.length; index++) {
+//     const container = container[index];
+//     console.log(jeu.getAttribute('id'));
+//     container.addEventListener('click', ()=>{
+//         console.log(container);
+//         buttonModal.classList.toggle('active');
+//         })
+// }
 // ************************************************************
 // let cards = document.querySelectorAll('card');
 // cards.forEach(card => {

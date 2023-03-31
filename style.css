@@ -254,3 +254,35 @@ footer p{
         width: 90%;
     }
 }
+
+/* Style de la Modal */
+
+.popupContent{
+    width: 300px;
+    height: 400px;
+    position : fixed;
+    bottom: 30%;
+    right : 30%;
+    background-color: #c81818;
+    border : 10px solid rgb(37, 37, 37);
+    padding: 10px;
+    z-index : 999;
+}
+.popupContent h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.popupContent p{
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.closeBtn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    color: white;
+    background-color: #000;
+}
