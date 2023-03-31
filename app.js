@@ -76,6 +76,8 @@ for (let i = 1; i < buttons.length; i++) {
   });
 }
 
+
+
 // // Ajout d'un gestionnaire d'événements sur cet élément
 // lastVisibleElement.addEventListener('click', (event) => {
 //     // Empêcher le comportement par défaut (ici, le clic) sur l'élément
