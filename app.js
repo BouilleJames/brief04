@@ -1,17 +1,7 @@
 // **********************CARROUSEL**********************
 
 document.body.onload=function(){
-    nbr=4;
-    p=0;
-    container=document.getElementById("container");
-    g=document.getElementById("g");
-    d=document.getElementById("d");
-    for(i=1;i<=nbr;i++){
-        document.getElementsByClassName('card');
-        div=document.createElement("div");
-        div.style.backgroundImage="url('image/img"+i+".jpg')";
-    }
-    afficherMasquer();
+    
 }
 g.onclick=function() {
     if(p>-nbr+1)
