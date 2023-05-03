@@ -1,5 +1,9 @@
 // **********************CARROUSEL**********************
 
+// Tout d'abord, on définit une fonction qui s'exécute lorsque le corps de la page est chargé.
+// Elle initialise quelques variables, notamment le nombre d'images à afficher, le compteur de position actuelle
+// et les éléments HTML correspondant à la zone d'affichage(container) et aux flèches de navigation('g'et'd').
+
 document.body.onload=function(){
     nbr=4;
     p=0;
@@ -67,7 +71,6 @@ for (let i = 0; i < buttons.length; i++) {
     const sections = document.body.querySelectorAll('section');
     let thirdSection = sections[2];
     thirdSection.appendChild(popup);
-    // document.body.appendChild(popup);
     console.log(buttons);
 
     // Ajouter un événement de clic au bouton "Close"
